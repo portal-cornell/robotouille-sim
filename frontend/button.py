@@ -98,9 +98,12 @@ class Button(Node):
         """
 
         if event.type == pygame.MOUSEBUTTONDOWN:
+
             self.is_pressed = self.in_bound()
+
         elif event.type == pygame.MOUSEBUTTONUP:
             if self.is_pressed:
                 self.is_pressed = False
                 return self.in_bound()
-        return False  
+
+        return False
